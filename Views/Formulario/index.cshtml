@@ -1,0 +1,31 @@
+@model RegistroAlumno.Models.Formulario
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <form asp-controller="Formulario" asp-action="Create" method="post">
+        
+        <label asp-for="nombre" class="control-label">Nombre:</label>
+        <input asp-for="nombre" class ="form-control" /> 
+        <label  class="control-label">Cursos:</label> <br>
+        <label><input asp-for="curso1" type ="checkbox" value="Lenguaje" name="Lenguaje" id="1" />Lenguaje</label> <br>
+        <label><input asp-for="curso2" type ="checkbox" value="Historia" name="Historia" id="2" />Historia</label> <br>
+        <label><input asp-for="curso3" type ="checkbox" value="Matematica" name="Matematica" />Matematica</label>  <br>
+        
+    <button type="submit" class="btn btn-primary">Hallar</button>
+    </form>
+
+    <h3>@ViewData["Message"]</h3>
+    <h3>@ViewData["Message2"]</h3>
+    <h3>@ViewData["Message3"]</h3>
+</body>
+</html>
